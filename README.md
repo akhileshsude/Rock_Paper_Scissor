@@ -1,0 +1,1 @@
+A simple implementation of the classic Rock-Paper-Scissors game built using basic JavaScript logic. The game allows a player to compete against the computer in a browser. The styling is created using CSS generated with the help of AI tools.
