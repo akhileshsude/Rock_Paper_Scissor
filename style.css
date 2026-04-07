@@ -1,0 +1,213 @@
+:root {
+  --primary: hsl(230, 100%, 65%);
+  --primary-glow: hsla(230, 100%, 65%, 0.3);
+  --bg: hsl(230, 20%, 8%);
+  --surface: hsl(230, 20%, 15%);
+  --text: hsl(230, 20%, 95%);
+  --text-dim: hsl(230, 10%, 60%);
+  --accent-win: hsl(145, 80%, 50%);
+  --accent-loss: hsl(355, 80%, 60%);
+  --radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    "Outfit",
+    "Inter",
+    -apple-system,
+    sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 0%, var(--primary) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.title-secondary {
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+#status {
+  background: var(--surface);
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 3rem;
+  background: hsla(230, 20%, 20%, 0.4);
+  padding: 40px;
+  border-radius: var(--radius);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 500px;
+}
+
+.choice-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.choice-box .label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+
+#choice p {
+  font-size: 4.5rem;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.vs {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--primary);
+  opacity: 0.5;
+  padding-top: 20px;
+}
+
+#score {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.score-item {
+  flex: 1;
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.score-item .label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+.score-item span:not(.label) {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+#streak {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2.5rem;
+  color: var(--text-dim);
+}
+
+#streakscore {
+  color: var(--accent-win);
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 2.5rem;
+}
+
+.buttons button {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button:hover {
+  transform: translateY(-5px);
+  background: var(--primary);
+  box-shadow: 0 10px 20px var(--primary-glow);
+}
+
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+#reset {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid var(--text-dim);
+  padding: 10px 25px;
+  border-radius: 100px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#reset:hover {
+  color: var(--text);
+  border-color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 480px) {
+  #choice {
+    gap: 20px;
+    padding: 25px;
+  }
+
+  .buttons button {
+    width: 70px;
+    height: 70px;
+    font-size: 1.7rem;
+  }
+}

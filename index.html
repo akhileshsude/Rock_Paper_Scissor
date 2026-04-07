@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors | Ultimate</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+    <div class="title-secondary">The Ultimate Duel</div>
+
+    <div id="status">Choose your weapon!</div>
+
+    <div id="choice">
+      <div class="choice-box">
+        <span class="label">COMPUTER</span>
+        <p id="computerchoice">❔</p>
+      </div>
+      <span class="vs">VS</span>
+      <div class="choice-box">
+        <span class="label">YOU</span>
+        <p id="yourchoice">❔</p>
+      </div>
+    </div>
+
+    <div id="score">
+      <div class="score-item">
+        <span class="label">COMPUTER</span>
+        <span id="computerscore">0</span>
+      </div>
+      <div class="score-item">
+        <span class="label">PLAYER</span>
+        <span id="yourscore">0</span>
+      </div>
+    </div>
+
+    <div id="streak">
+      <span>Current Streak:</span>
+      <span id="streakscore">0</span>
+    </div>
+
+    <div class="buttons">
+      <button id="rock" title="Rock">🪨</button>
+      <button id="paper" title="Paper">📄</button>
+      <button id="scissors" title="Scissors">✂️</button>
+    </div>
+
+    <button id="reset">Reset Records</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
